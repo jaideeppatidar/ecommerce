@@ -35,6 +35,9 @@ const Header = () => {
           <Link to="/product" style={{ textDecoration: 'none', color: 'inherit', marginRight: '1rem' }}>
             <Typography variant="body1" style={{ fontSize:"20px"}} >Products</Typography>
           </Link>
+          <Link to="/orderhistory" style={{ textDecoration: 'none', color: 'inherit', marginRight: '1rem' }}>
+            <Typography variant="body1" style={{ fontSize:"20px"}} >OrderHistory</Typography>
+          </Link>
         </Box>
         </div>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>

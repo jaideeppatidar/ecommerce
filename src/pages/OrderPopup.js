@@ -1,8 +1,9 @@
-// src/components/OrderPopup.jsx
+
+
 import React, { useState } from 'react';
 import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button } from '@mui/material';
 
-const OrderPopup = ({ open, onClose }) => {
+const OrderPopup = ({ open, onClose, cart }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,9 +22,25 @@ const OrderPopup = ({ open, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('orderData', JSON.stringify(formData));
-        console.log(formData);
+    saveOrderToHistory();
     onClose();
+  };
+
+  const saveOrderToHistory = () => {
+    const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+    const newOrder = {
+      id: Date.now(),
+      items: cart,
+      date: new Date().toLocaleDateString(),
+      name: formData.name,
+      email: formData.email,
+      number: formData.number,
+      address: formData.address,
+      address1: formData.address1,
+      pincode: formData.pincode,
+    };
+    orderHistory.push(newOrder);
+    localStorage.setItem('orderHistory', JSON.stringify(orderHistory));
   };
 
   return (

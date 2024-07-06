@@ -10,7 +10,6 @@ const HomePage = () => {
           <ImageSlider/>
           <AboutPage/>
           <ProductListingPage/>
-          {/* <Footer/> */}
         
     </div>
   )

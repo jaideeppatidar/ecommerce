@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const ProductListingPage = () => {
   const navigate = useNavigate()
-  const [products, setProducts] = useState(initialProducts.slice(0, 5)); // Initially show only 5 products
+  const [products, setProducts] = useState(initialProducts.slice(0, 5)); 
   const [filters, setFilters] = useState({
     category: '',
     priceRange: '',
@@ -55,14 +55,9 @@ const ProductListingPage = () => {
     setShowAll(!showAll);
   };
 
-  const addToCart = (productId) => {
-    // Implement your addToCart logic here
-    console.log(`Product ${productId} added to cart`);
-  };
 
   const viewDetails = (productId) => {
     navigate(`/product/${productId}`)
-    console.log(`View details of product ${productId}`);
   };
 
   return (
@@ -117,8 +112,8 @@ const ProductListingPage = () => {
             <p>Category: {product.category}</p>
             <p>Price: ${product.price}</p>
             <div className="button-container">
-              <button className="add-to-cart-btn" style={{ display:'flex' ,justifyContent:'center', alignItems:"center"}} onClick={() => viewDetails(product.id)}>
-               View <RemoveRedEyeIcon/>
+              <button className="add-to-cart-btn" style={{ display: 'flex', justifyContent: 'center', alignItems: "center" }} onClick={() => viewDetails(product.id)}>
+                View <RemoveRedEyeIcon />
               </button>
             </div>
           </div>
