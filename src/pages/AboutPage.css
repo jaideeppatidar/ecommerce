@@ -1,0 +1,49 @@
+
+   .aboutContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+   }
+  .aboutContainerbox{
+    padding-top: 100px;
+  }
+  .aboutbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light background color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .box1,
+  .box2 {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .box1 {
+    order: 1; 
+  }
+  
+  .box2 {
+    order: 2;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+  }
+  
